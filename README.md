@@ -18,7 +18,7 @@ A live version is available [here](https://imageboard-u5u0.onrender.com/).
 
 Note : this diagram was created with [diagrams.net](https://www.drawio.com/) and uses the following assets :
 - [Person icons created by yaicon - Flaticon](https://www.flaticon.com/free-icons/person)
-- [Url icônes icons created by xnimrodx - Flaticon](https://www.flaticon.com/free-icons/url)
+- [Url icons created by xnimrodx - Flaticon](https://www.flaticon.com/free-icons/url)
 
 ### Usage
 
