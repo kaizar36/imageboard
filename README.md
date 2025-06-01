@@ -10,6 +10,8 @@ The application uses the following technologies :
 - [PostGraphile](https://postgraphile.org/)
 - [PostgreSQL](https://www.postgresql.org/)
 
+A live version is available [here](https://imageboard-u5u0.onrender.com/).
+
 ### Architecture
 
 ![architecture](./docs/architecture.drawio.svg)
@@ -17,6 +19,39 @@ The application uses the following technologies :
 Note : this diagram was created with [diagrams.net](https://www.drawio.com/) and uses the following assets :
 - [Person icons created by yaicon - Flaticon](https://www.flaticon.com/free-icons/person)
 - [Url icônes icons created by xnimrodx - Flaticon](https://www.flaticon.com/free-icons/url)
+
+### Usage
+
+Go to the home page `/` in order to see all the images.
+
+Go to the page `/graphiql`, in order to create an image, and on the GraphiQL user interface create a [mutation](https://graphql.com/learn/mutations) with the following content
+
+```js
+mutation AddImage($createImageInput: CreateImageInput!) {
+  createImage(input: $createImageInput) {
+    image {
+      id
+      title
+      url
+    }
+  }
+}
+```
+
+and the following variable
+
+```json
+{
+  "createImageInput": {
+    "image": {
+      "title": "${title}",
+      "url": "${url}"
+    }
+  }
+}
+```
+
+Replace `${title}` and `${url}` with the title and the url of the image that you want to add.
 
 ## UML Diagrams
 
