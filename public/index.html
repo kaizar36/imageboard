@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Imageboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div id="elm-node"></div>
+	<script type="text/javascript" src="main.js"></script>
+	<script>
+        const app = Elm.Main.init({
+            node: document.getElementById("elm-node"),
+            flags: {
+                graphQLUrl: "graphql"
+            }
+        });
+    </script>
+</body>
+</html>

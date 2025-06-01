@@ -1,0 +1,27 @@
+{
+  "name": "imageboard",
+  "version": "1.0.0",
+  "description": "an imageboard with elm, graphql, postgraphile and postgresql",
+  "main": "index.js",
+  "type": "module",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "node index",
+    "build": "elm make src/Main.elm --output=public/main.js",
+    "build:debug": "elm make --debug src/Main.elm --output=public/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "postgraphile": "^4.14.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.2",
+    "dotenv": "^16.5.0",
+    "elm": "^0.19.1-6"
+  }
+}

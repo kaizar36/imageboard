@@ -1,0 +1,11 @@
+@startuml use-case-diagram
+
+actor Visitor
+actor Editor
+
+Editor --> (Add an image)
+Editor --> (Modify an image)
+Editor --> (Remove an image)
+Visitor --> (See the list of the images)
+
+@enduml

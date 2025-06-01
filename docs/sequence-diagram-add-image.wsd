@@ -1,0 +1,10 @@
+@startuml sequence-diagram-add-image
+
+actor Editor
+
+Editor->PostGraphile: Make a GraphQL mutation
+PostGraphile->PostgreSQL: Make a SQL query
+PostgreSQL-->PostGraphile
+PostGraphile-->Editor
+
+@enduml

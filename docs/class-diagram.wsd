@@ -1,0 +1,30 @@
+@startuml class-diagram
+
+class Model {
+}
+
+enum RemoteData {
+    NotAsked
+    Loading
+    Failure
+    Success
+}
+
+class Error {
+}
+
+class Response {
+}
+
+class Image {
+  + String title
+  + String url
+  + Int id
+}
+
+Model --> "1" RemoteData
+RemoteData --> "0..1" Error
+RemoteData --> "0..1" Response
+Response --> "0..*" Image
+
+@enduml

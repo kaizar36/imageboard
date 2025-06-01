@@ -1,0 +1,13 @@
+@startuml sequence-diagram-list-images
+
+actor Visitor
+participant "Web application" as Web
+
+Visitor->Web: Visit the home page
+Web->PostGraphile: Make a GraphQL query
+PostGraphile->PostgreSQL: Make a SQL query
+PostgreSQL-->PostGraphile
+PostGraphile-->Web
+Web-->Visitor
+
+@enduml

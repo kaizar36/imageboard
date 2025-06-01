@@ -1,0 +1,3 @@
+CREATE DATABASE imageboard;
+USE imageboard;
+CREATE TABLE image (id serial PRIMARY KEY, title VARCHAR(100) NOT NULL, url VARCHAR(2000) NOT NULL);

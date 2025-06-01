@@ -1,0 +1,9 @@
+@startuml entity-relationship-diagram
+
+entity image {
+    id : serial
+    title : varchar(100)
+    url : varchar(2000)
+}
+
+@enduml
