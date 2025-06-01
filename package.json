@@ -16,12 +16,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.5.0",
+    "elm": "^0.19.1-6",
     "express": "^5.1.0",
     "postgraphile": "^4.14.1"
   },
   "devDependencies": {
-    "@types/express": "^5.0.2",
-    "dotenv": "^16.5.0",
-    "elm": "^0.19.1-6"
+    "@types/express": "^5.0.2"
   }
 }
