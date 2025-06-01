@@ -11,6 +11,7 @@
     "start": "node index",
     "build": "elm make src/Main.elm --output=public/main.js",
     "build:debug": "elm make --debug src/Main.elm --output=public/main.js",
+    "format": "elm-format src/Main.elm",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -22,6 +23,7 @@
     "postgraphile": "^4.14.1"
   },
   "devDependencies": {
-    "@types/express": "^5.0.2"
+    "@types/express": "^5.0.2",
+    "elm-format": "^0.8.7"
   }
 }
