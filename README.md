@@ -89,10 +89,10 @@ The UML diagrams are built with [PlantUML](https://plantuml.com/).
 
 ## Installation
 
-1. Install Elm using the [official guide](https://guide.elm-lang.org/install/elm.html).
+1. Install [Elm](https://guide.elm-lang.org/install/elm.html).
 2. Install [PostgreSQL](https://www.postgresql.org/).
 3. Create the database using the script [init-database.sql](./init-database.sql).
-4. Install [Node.js](https://nodejs.org/), it's needed for installing Postgraphile.
+4. Install [Node.js](https://nodejs.org/).
 5. Install the dependencies with `npm install`
 6. Build the application with `npm run build`
 7. Create the `.env` in the root folder with the following content
@@ -101,6 +101,7 @@ DATABASE_URL=postgresql://${username}$:${password}@${hostname}:${port}/imageboar
 ```
 and replace the variables `${username}`, `${password}`, `${hostname}` and `${port}` with the correct values in order to have a good PostgreSQL connection string.
 For example, you can have the following connection string : `postgresql://alice:secret@localhost:5432/imageboard`.
+If you don't want to use a .env file, then you can set a valid value directly in the environment variable `DATABASE_URL`.
 
 8. Run the application with `npm start`
 
