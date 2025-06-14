@@ -4,9 +4,8 @@ import Browser
 import Graphql.Http exposing (Error, queryRequest, send)
 import Graphql.Operation exposing (RootQuery)
 import Graphql.SelectionSet exposing (SelectionSet, map3)
-import Html exposing (Html, div, h1, img, li, text)
+import Html exposing (Html, div, h1, img, li, text, ul)
 import Html.Attributes exposing (alt, class, src)
-import Imageboard.Object exposing (ImagesConnection(..))
 import Imageboard.Object.Image exposing (id, title, url)
 import Imageboard.Object.ImagesConnection exposing (nodes)
 import Imageboard.Query exposing (allImages)
@@ -62,7 +61,7 @@ view model =
                     div
                         []
                         [ h1 [] [ text "Imageboard" ]
-                        , div [ class "gallery" ] (List.map viewImage images)
+                        , ul [ class "gallery" ] (List.map viewImage images)
                         ]
 
 
@@ -73,14 +72,16 @@ viewImage maybeImage =
             li [] [ text "No data could be retrieve from the server." ]
 
         Just image ->
-            img
-                [ src image.url, Html.Attributes.id (fromInt image.id), alt image.title ]
-                []
+            li []
+                [ img
+                    [ src image.url, Html.Attributes.id (fromInt image.id), alt image.title ]
+                    []
+                ]
 
 
 makeRequest : String -> Cmd Msg
-makeRequest graphUrl =
-    send (fromResult >> GotResponse) (queryRequest graphUrl query)
+makeRequest graphQLUrl =
+    send (fromResult >> GotResponse) (queryRequest graphQLUrl query)
 
 
 query : SelectionSet (Maybe (List (Maybe Image))) RootQuery

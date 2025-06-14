@@ -7,6 +7,10 @@
   "directories": {
     "doc": "docs"
   },
+  "engines": {
+    "node": ">= 22.0.0",
+    "npm": ">= 10.0.0"
+  },
   "scripts": {
     "start": "node index",
     "build": "elm make src/Main.elm --output=public/main.js",
@@ -18,12 +22,12 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.5.0",
-    "elm": "^0.19.1-6",
     "express": "^5.1.0",
     "postgraphile": "^4.14.1"
   },
   "devDependencies": {
     "@types/express": "^5.0.2",
+    "elm": "^0.19.1-6",
     "elm-format": "^0.8.7"
   }
 }

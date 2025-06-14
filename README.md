@@ -6,11 +6,16 @@ A web application that allows visitors to see images and editors to add, modify 
 
 The application uses the following technologies :
 - [Elm](https://elm-lang.org/)
+- [elm-graphql](https://github.com/dillonkearns/elm-graphql)
 - [GraphQL](https://graphql.org/)
 - [PostGraphile](https://postgraphile.org/)
 - [PostgreSQL](https://www.postgresql.org/)
 
-A live version is available [here](https://imageboard-u5u0.onrender.com/).
+Bellow you can see how this web application looks.
+
+![Demo](./docs/demo.gif)
+
+A live demo version is available [here](https://imageboard-u5u0.onrender.com/).
 
 ### Architecture
 
@@ -93,9 +98,9 @@ The UML diagrams are built with [PlantUML](https://plantuml.com/).
 2. Install [PostgreSQL](https://www.postgresql.org/).
 3. Create the database using the script [init-database.sql](./init-database.sql).
 4. Install [Node.js](https://nodejs.org/).
-5. Install the dependencies with `npm install`
-6. Build the application with `npm run build`
-7. Create the `.env` in the root folder with the following content
+5. Install the dependencies with `npm install`.
+6. Build the application with `npm run build`.
+7. Create the `.env` in the root folder with the following content.
 ```
 DATABASE_URL=postgresql://${username}$:${password}@${hostname}:${port}/imageboard
 ```
@@ -114,7 +119,7 @@ Note that a build tool like [Parcel](https://parceljs.org/) or [Webpack](https:/
 
 You can easily debug the server part of this application (the Node.js program that launchs the web server and PostGraphile) using the [Visual Studio Code Debugger](https://code.visualstudio.com/docs/debugtest/debugging).
 
-### Debug with ELM Debugger
+### Debug with Elm Debugger
 
-You can activate the [ELM time travel debugger](https://elm-lang.org/news/the-perfect-bug-report) by running the command `npm run build:debug`.
-Once this command executed, you will be able to see, on your web browser, the ELM time travel debugger, when you navigate to the web application.
+You can activate the [Elm time travel debugger](https://elm-lang.org/news/the-perfect-bug-report) by running the command `npm run build:debug`.
+Once this command executed, you will be able to see, on your web browser, the Elm time travel debugger, when you navigate to the web application.
