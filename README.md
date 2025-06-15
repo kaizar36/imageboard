@@ -21,7 +21,7 @@ A live demo version is available [here](https://imageboard-u5u0.onrender.com/).
 
 ![architecture](./docs/architecture.drawio.svg)
 
-Note : this diagram was created with [diagrams.net](https://www.drawio.com/) and uses the following assets :
+Note : this diagram was created with [draw.io](https://www.drawio.com/) and uses the following assets :
 - [Person icons created by yaicon - Flaticon](https://www.flaticon.com/free-icons/person)
 - [Url icons created by xnimrodx - Flaticon](https://www.flaticon.com/free-icons/url)
 
