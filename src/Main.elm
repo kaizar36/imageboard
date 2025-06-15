@@ -4,7 +4,7 @@ import Browser
 import Graphql.Http exposing (Error, queryRequest, send)
 import Graphql.Operation exposing (RootQuery)
 import Graphql.SelectionSet exposing (SelectionSet, map3)
-import Html exposing (Html, div, h1, img, li, text, ul)
+import Html exposing (Html, div, h1, img, text)
 import Html.Attributes exposing (alt, class, src)
 import Imageboard.Object.Image exposing (id, title, url)
 import Imageboard.Object.ImagesConnection exposing (nodes)
@@ -61,7 +61,7 @@ view model =
                     div
                         []
                         [ h1 [] [ text "Imageboard" ]
-                        , ul [ class "gallery" ] (List.map viewImage images)
+                        , div [ class "gallery" ] (List.map viewImage images)
                         ]
 
 
@@ -69,14 +69,12 @@ viewImage : Maybe Image -> Html Msg
 viewImage maybeImage =
     case maybeImage of
         Nothing ->
-            li [] [ text "No data could be retrieve from the server." ]
+            div [] [ text "No data could be retrieve from the server." ]
 
         Just image ->
-            li []
-                [ img
-                    [ src image.url, Html.Attributes.id (fromInt image.id), alt image.title ]
-                    []
-                ]
+            img
+                [ src image.url, Html.Attributes.id (fromInt image.id), alt image.title ]
+                []
 
 
 makeRequest : String -> Cmd Msg

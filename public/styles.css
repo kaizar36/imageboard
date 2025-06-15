@@ -26,12 +26,8 @@ h1 {
     padding-bottom: 20px;
 }
 
-.gallery li {
-    list-style-type: none;
-    width: 100%;
-}
-
 .gallery img {
+    width: 100%;
     max-width: 350px;
     height: auto;
     border: 5px solid #0077cc;
