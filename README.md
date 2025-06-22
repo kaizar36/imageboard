@@ -11,7 +11,7 @@ The application uses the following technologies :
 - [PostGraphile](https://postgraphile.org/)
 - [PostgreSQL](https://www.postgresql.org/)
 
-Bellow you can see how this web application looks.
+Below you can see how this web application looks.
 
 ![Demo](./docs/demo.gif)
 
@@ -21,7 +21,7 @@ A live demo version is available [here](https://imageboard-u5u0.onrender.com/).
 
 ![architecture](./docs/architecture.drawio.svg)
 
-Note : this diagram was created with [draw.io](https://www.drawio.com/) and uses the following assets :
+Note : this diagram is built with [draw.io](https://www.drawio.com/) and uses the following assets :
 - [Person icons created by yaicon - Flaticon](https://www.flaticon.com/free-icons/person)
 - [Url icons created by xnimrodx - Flaticon](https://www.flaticon.com/free-icons/url)
 
@@ -96,7 +96,7 @@ The UML diagrams are built with [PlantUML](https://plantuml.com/).
 
 1. Install [Elm](https://guide.elm-lang.org/install/elm.html).
 2. Install [PostgreSQL](https://www.postgresql.org/).
-3. Create the database using the script [init-database.sql](./init-database.sql).
+3. Create a database named *imageboard* and create the database schema with the script [init-database.sql](./init-database.sql).
 4. Install [Node.js](https://nodejs.org/).
 5. Install the dependencies with `npm install`.
 6. Build the application with `npm run build`.
@@ -104,7 +104,7 @@ The UML diagrams are built with [PlantUML](https://plantuml.com/).
 ```
 DATABASE_URL=postgresql://${username}$:${password}@${hostname}:${port}/imageboard
 ```
-and replace the variables `${username}`, `${password}`, `${hostname}` and `${port}` with the correct values in order to have a good PostgreSQL connection string.
+and replace the variables `${username}`, `${password}`, `${hostname}` and `${port}` with the correct values in order to have a valid PostgreSQL connection string.
 For example, you can have the following connection string : `postgresql://alice:secret@localhost:5432/imageboard`.
 If you don't want to use a .env file, then you can set a valid value directly in the environment variable `DATABASE_URL`.
 
