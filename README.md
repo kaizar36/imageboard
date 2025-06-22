@@ -27,9 +27,9 @@ Note : this diagram is built with [draw.io](https://www.drawio.com/) and uses th
 
 ### Usage
 
-Go to the home page `/` in order to see all the images.
+Go to the home page `/` to see all the images.
 
-Go to the page `/graphiql`, in order to create an image, and on the GraphiQL user interface create a [mutation](https://graphql.com/learn/mutations) with the following content
+Go to the page `/graphiql`, to create an image, and on the GraphiQL user interface create a [mutation](https://graphql.com/learn/mutations) with the following content
 
 ```js
 mutation AddImage($createImageInput: CreateImageInput!) {
@@ -104,16 +104,16 @@ The UML diagrams are built with [PlantUML](https://plantuml.com/).
 ```
 DATABASE_URL=postgresql://${username}$:${password}@${hostname}:${port}/imageboard
 ```
-and replace the variables `${username}`, `${password}`, `${hostname}` and `${port}` with the correct values in order to have a valid PostgreSQL connection string.
+and replace the variables `${username}`, `${password}`, `${hostname}` and `${port}` with the correct values to have a valid PostgreSQL connection string.
 For example, you can have the following connection string : `postgresql://alice:secret@localhost:5432/imageboard`.
 If you don't want to use a .env file, then you can set a valid value directly in the environment variable `DATABASE_URL`.
 
-8. Run the application with `npm start`
+8. Run the application with `npm start`.
 
-Note that a build tool like [Parcel](https://parceljs.org/) or [Webpack](https://webpack.js.org/) can be used in order to automate the compilation and the run of this web application. But in order to keep the tutorial simple, these tools are not used.
+Note that a build tool like [Parcel](https://parceljs.org/) or [Webpack](https://webpack.js.org/) can be used to automate the compilation and the run of this web application. But to keep the tutorial simple, these tools are not used.
 
-9. Open a web browser on the url <http://localhost:8080> in order to see the list of the images.
-10. Open a web browser on the url <http://localhost:8080/graphiql> in order to add, modify and remove the images using [GraphiQL](https://github.com/graphql/graphiql). 
+9. Open a web browser on the url <http://localhost:8080> to see the list of the images.
+10. Open a web browser on the url <http://localhost:8080/graphiql> to add, modify and remove the images using [GraphiQL](https://github.com/graphql/graphiql). 
 
 ### Launch and debug with Visual Studio Code
 
