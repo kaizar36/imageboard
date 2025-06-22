@@ -28,6 +28,16 @@ init flags =
     ( Loading, makeRequest flags.graphQLUrl )
 
 
+makeRequest : String -> Cmd Msg
+makeRequest graphQLUrl =
+    send (fromResult >> GotResponse) (queryRequest graphQLUrl query)
+
+
+query : SelectionSet (Maybe (List (Maybe Image))) RootQuery
+query =
+    allImages identity (nodes (map3 Image title url id))
+
+
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg _ =
     case msg of
@@ -69,26 +79,12 @@ viewImage : Maybe Image -> Html Msg
 viewImage maybeImage =
     case maybeImage of
         Nothing ->
-            div [] [ text "No data could be retrieve from the server." ]
+            div [] [ text "No data could be retrieved from the server." ]
 
         Just image ->
             img
                 [ src image.url, Html.Attributes.id (fromInt image.id), alt image.title ]
                 []
-
-
-makeRequest : String -> Cmd Msg
-makeRequest graphQLUrl =
-    send (fromResult >> GotResponse) (queryRequest graphQLUrl query)
-
-
-query : SelectionSet (Maybe (List (Maybe Image))) RootQuery
-query =
-    allImages identity (nodes (map3 Image title url id))
-
-
-type Msg
-    = GotResponse Model
 
 
 type alias Model =
@@ -104,6 +100,10 @@ type alias Image =
     , url : String
     , id : Int
     }
+
+
+type Msg
+    = GotResponse Model
 
 
 type alias Flags =
